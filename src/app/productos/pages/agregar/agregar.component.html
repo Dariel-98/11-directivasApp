@@ -14,14 +14,19 @@
         *ngIf="tieneError('nombre')"
         error-msg
         color="blue"
-        mensaje="Debe de ingresar este campo"
+        [mensaje]="texto1"
+        [color]="color"
         >Este campo es requerido</span
       >
     </div>
   </div>
   <div class="row">
     <div class="col">
-      <button class="btn btn-primary">Guardar</button>
+      <button class="btn btn-primary" (click)="cambiarNombre()">Guardar</button>
+      &nbsp;
+      <button class="btn btn-primary" (click)="cambiarColor()">
+        Cambiar color
+      </button>
     </div>
   </div>
 </form>
